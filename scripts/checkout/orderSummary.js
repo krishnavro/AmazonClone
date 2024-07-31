@@ -10,12 +10,9 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js'
 
-hello();
+import { renderPaymentSummary } from './paymentSummary.js';
 
 
-const today = dayjs();
-const deliveryDate = today.add(7, 'days');
- console.log(deliveryDate.format('dddd, MMMM D'));
 
  export function renderOrderSummary(){
 
@@ -139,6 +136,8 @@ const deliveryDate = today.add(7, 'days');
 
     );
     container.remove();
+
+    renderPaymentSummary();
         });
     });
 
@@ -148,6 +147,7 @@ const deliveryDate = today.add(7, 'days');
             const {productId, deliveryOptionId} = element.dataset;
         updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      renderPaymentSummary();
     });
     });
 
