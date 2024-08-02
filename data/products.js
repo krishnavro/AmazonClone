@@ -112,9 +112,13 @@ object3.method();
     
   
    console.log('load products');
+  }).catch((error)=>{
+    console.log('Unexpected error. Please try again later.');
+
   });
   return promise;
  }
+ 
 /*
  loadProductsFetch().then(()=> {
     console.log('next step');
@@ -139,12 +143,13 @@ object3.method();
  fun();
  });
 
-
+xhr.addEventListener('error', (error) => {
+  console.log('Unexpected error. Please try again later.');
+});
 
  xhr.open('GET', 'https://supersimplebackend.dev/products');
  xhr.send(); 
 }
-
 
 
 
