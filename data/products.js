@@ -119,7 +119,7 @@ object3.method();
  xhr.open('GET', 'https://supersimplebackend.dev/products');
  xhr.send(); 
 }
-loadProducts();
+
 
 
 

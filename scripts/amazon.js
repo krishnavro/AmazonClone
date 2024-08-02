@@ -100,3 +100,7 @@ function renderProductsGrid() {
   });
 
   }
+
+  loadProducts(() => {
+   renderProductsGrid();
+  });
