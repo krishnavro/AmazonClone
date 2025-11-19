@@ -1,0 +1,1 @@
+<h1>I have made an amazon clone with the help of Youtube course Supersimpledev<h1>
